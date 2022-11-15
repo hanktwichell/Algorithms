@@ -14,27 +14,27 @@ function fibonacci(n) {
     return fibonacci(n-1) + fibonacci(n-2)
 }
 
-const num21 = 0;
-const expected21 = 0;
+const num1 = 0;
+const expected1 = 0;
 
-const num22 = 1;
-const expected22 = 1;
+const num2 = 1;
+const expected2 = 1;
 
-const num23 = 2;
-const expected23 = 1;
+const num3 = 2;
+const expected3 = 1;
 
-const num24 = 3;
-const expected24 = 2;
+const num4 = 3;
+const expected4 = 2;
 
-const num25 = 4;
-const expected25 = 3;
+const num5 = 4;
+const expected5 = 3;
 
-const num26 = 8;
-const expected26 = 21;
+const num6 = 8;
+const expected6 = 21;
 
-console.log(fibonacci(num21))
-console.log(fibonacci(num22))
-console.log(fibonacci(num23))
-console.log(fibonacci(num24))
-console.log(fibonacci(num25))
-console.log(fibonacci(num26))
+console.log(fibonacci(num1))
+console.log(fibonacci(num2))
+console.log(fibonacci(num3))
+console.log(fibonacci(num4))
+console.log(fibonacci(num5))
+console.log(fibonacci(num6))
