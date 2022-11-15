@@ -1,5 +1,4 @@
-// Not Using "Split"
-function acronymNoSplit(str) {
+function acronymNoSplit(str) { // Not Using "Split"
     var result = "";
     if (str == undefined)
         return result;
@@ -11,8 +10,7 @@ function acronymNoSplit(str) {
     return result;
 }
 
-// Using "Split"
-function acronymSplit(str) {
+function acronymSplit(str) { // Using "Split"
     var result = "";
     if (str == undefined)
         return result;
