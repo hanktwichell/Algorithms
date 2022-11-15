@@ -7,6 +7,25 @@
     return the current inventory after updating it.
 */
 
+function updateInventory(newInv, currInv) {
+    if (newInv.length < 1)
+        return currInv
+    if (currInv.length < 1)
+        return newInv
+    for (var i=0; i<newInv.length; i++) {
+        notInInv = true
+        for (var j=0; j<currInv.length; j++)
+            if (currInv[j].name == newInv[i].name) {
+                currInv[j].quantity += newInv[i].quantity
+                notInInv = false
+                break
+            }
+        if (notInInv)
+            currInv.push({"name": newInv[i].name, "quantity": newInv[i].quantity})
+    }
+    return currInv
+}
+
 const newInv1 = [
     { name: "Grain of Rice", quantity: 9000 },
     { name: "Peanut Butter", quantity: 50 },
@@ -29,25 +48,6 @@ const expected2 = [{ name: "Peanut Butter", quantity: 20 }];
 const newInv3 = [{ name: "Peanut Butter", quantity: 20 }];
 const currInv3 = [];
 const expected3 = [{ name: "Peanut Butter", quantity: 20 }];
-
-function updateInventory(newInv, currInv) {
-    if (newInv.length < 1)
-        return currInv
-    if (currInv.length < 1)
-        return newInv
-    for (var i=0; i<newInv.length; i++) {
-        notInInv = true
-        for (var j=0; j<currInv.length; j++)
-            if (currInv[j].name == newInv[i].name) {
-                currInv[j].quantity += newInv[i].quantity
-                notInInv = false
-                break
-            }
-        if (notInInv)
-            currInv.push({"name": newInv[i].name, "quantity": newInv[i].quantity})
-    }
-    return currInv
-}
 
 console.log("1", updateInventory(newInv1, currInv1))
 console.log("2", updateInventory(newInv2, currInv2))
